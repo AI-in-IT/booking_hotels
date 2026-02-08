@@ -10,6 +10,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 #импортируем необходимые роутеры
 from src.api.hotels import router as router_hotels
+from src.api.auth import router as router_auth
 from src.api.docs import create_docs_router
 from _course_helpers.fastapi_load_test import router as router_tests
 
@@ -31,6 +32,8 @@ router_docs = create_docs_router(app)
 app.include_router(router_hotels)
 app.include_router(router_docs)
 app.include_router(router_tests)
+app.include_router(router_auth)
+
 
 
 

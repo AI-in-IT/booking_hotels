@@ -10,6 +10,7 @@ from alembic import context
 from src.database import Base
 from src.models.hotels import HotelsOrm
 from src.models.rooms import RoomsOrm
+from src.models.users import UsersOrm
 #импортируем настройки с переменными среды
 from src.config import settings
 
